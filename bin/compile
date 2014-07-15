@@ -115,6 +115,11 @@ then
     . $venv/bin/activate > /dev/null 2>&1
     echo " done"
 
+    echo -n "       Installing NodeJS..."
+    cd /usr/local && tar --strip-components 1 -xzf \
+        /path/to/node-<version>-<platform>-<arch>.tar.gz
+    echo -n " done"
+
     echo -n "       Installing Mercurial..."
     pip install mercurial > /dev/null 2>&1
     echo " done"
