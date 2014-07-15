@@ -117,7 +117,7 @@ then
 
     echo -n "       Installing NodeJS..."
     cd /usr/local && tar --strip-components 1 -xzf \
-        /path/to/node-<version>-<platform>-<arch>.tar.gz
+        $buildpack/node.tar.gz
     echo -n " done"
 
     echo -n "       Installing Mercurial..."
