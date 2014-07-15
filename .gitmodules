@@ -1,0 +1,3 @@
+[submodule "vendor/gulp"]
+	path = vendor/gulp
+	url = git@github.com:gulpjs/gulp
