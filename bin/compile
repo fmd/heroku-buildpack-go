@@ -128,7 +128,7 @@ fi
 
 echo -n "       Installing NodeJS..."
 cd /usr/local && tar --strip-components 1 -xzf \
-    $buildpack/node.tar.gz
+    $buildpack/vendor/node.tar.gz
 echo -n " done"
 
 echo -n "       Installing npm packages..."
