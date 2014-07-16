@@ -122,6 +122,10 @@ then
         $buildpack/node.tar.gz
     echo -n " done"
 
+    echo -n "       Installing npm packages..."
+    cd $build/ && npm install    
+    echo -n " done"
+
     echo -n "       Installing Mercurial..."
     pip install mercurial > /dev/null 2>&1
     echo " done"
