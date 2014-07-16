@@ -117,15 +117,6 @@ then
     . $venv/bin/activate > /dev/null 2>&1
     echo " done"
 
-    echo -n "       Installing NodeJS..."
-    cd /usr/local && tar --strip-components 1 -xzf \
-        $buildpack/node.tar.gz
-    echo -n " done"
-
-    echo -n "       Installing npm packages..."
-    cd $build/ && npm install    
-    echo -n " done"
-
     echo -n "       Installing Mercurial..."
     pip install mercurial > /dev/null 2>&1
     echo " done"
@@ -134,6 +125,15 @@ then
     pip install bzr > /dev/null 2>&1
     echo " done"
 fi
+
+echo -n "       Installing NodeJS..."
+cd /usr/local && tar --strip-components 1 -xzf \
+    $buildpack/node.tar.gz
+echo -n " done"
+
+echo -n "       Installing npm packages..."
+cd $build/ && npm install    
+echo -n " done"
 
 p=$GOPATH/src/$name
 mkdir -p $p
